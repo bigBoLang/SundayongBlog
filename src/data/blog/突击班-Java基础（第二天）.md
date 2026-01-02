@@ -1,14 +1,14 @@
 ---
 author: 孙大勇
 pubDatetime: 2026-01-02T13:00:00Z
-title: Docker 走代理配置指南
+title: 突击班-Java基础（第二天）
 postSlug: docker-proxy-guide
 featured: false
 draft: false
 tags:
   - docker
   - proxy
-description: 这篇文章介绍了如何为 Docker 配置代理服务器。
+description: 这篇文章介绍了突击班-Java基础（第二天）。
 ---
 
 ## 一、解释什么是面向对象编程（OOP），并讨论Java中封装、继承和多态的实现方式及其应用场景（百度AI）
