@@ -1,14 +1,15 @@
 ---
 author: 孙大勇
 pubDatetime: 2026-01-02T13:00:00Z
-title: 突击班-Java基础（第三天）
-postSlug: docker-proxy-guide
+title: 突击班 - Java 基础（第三天）
+postSlug: java-basics-crash-course-day3
 featured: false
 draft: false
 tags:
-  - docker
-  - proxy
-description: 这篇文章介绍了突击班-Java基础（第三天）。
+  - java
+  - basics
+  - crash-course
+description: Java 基础突击班第三天内容，深入探讨 HashMap 的 put 流程等高级主题。
 ---
 
 ## 一、HashMap的put流程？（易点云、乌鸫等公司）

@@ -1,14 +1,15 @@
 ---
 author: 孙大勇
 pubDatetime: 2026-01-02T13:00:00Z
-title: 突击班-Java基础（第二天）
-postSlug: docker-proxy-guide
+title: 突击班 - Java 基础（第二天）
+postSlug: java-basics-crash-course-day2
 featured: false
 draft: false
 tags:
-  - docker
-  - proxy
-description: 这篇文章介绍了突击班-Java基础（第二天）。
+  - java
+  - basics
+  - crash-course
+description: Java 基础突击班第二天内容，解释面向对象编程及其在 Java 中的实现。
 ---
 
 ## 一、解释什么是面向对象编程（OOP），并讨论Java中封装、继承和多态的实现方式及其应用场景（百度AI）

@@ -1,14 +1,15 @@
 ---
 author: 孙大勇
 pubDatetime: 2026-01-02T13:00:00Z
-title: anaconda安装教程win11
-postSlug: docker-proxy-guide
+title: 在 Windows 11 上安装 Anaconda 教程
+postSlug: anaconda-installation-win11
 featured: false
 draft: false
 tags:
-  - docker
-  - proxy
-description: 这篇文章介绍了anaconda安装教程win11。
+  - python
+  - anaconda
+  - installation
+description: 详细介绍在 Windows 11 系统上安装 Anaconda 的步骤和注意事项，帮助初学者快速上手 Python 环境配置。
 ---
 ### 一、下载 Anaconda
 

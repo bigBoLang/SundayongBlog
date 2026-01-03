@@ -1,14 +1,15 @@
 ---
 author: 孙大勇
 pubDatetime: 2026-01-02T13:00:00Z
-title: git大文件上传失败
-postSlug: docker-proxy-guide
+title: Git 大文件上传失败解决方案
+postSlug: git-large-file-upload-failure
 featured: false
 draft: false
 tags:
-  - docker
-  - proxy
-description: 这篇文章介绍了git大文件上传失败。
+  - git
+  - large-files
+  - troubleshooting
+description: 解决 Git 上传大文件失败的问题，包括 LFS 配置和清理历史记录的方法。
 ---
 ### git大文件上传失败：
 

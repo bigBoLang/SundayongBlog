@@ -1,14 +1,15 @@
 ---
 author: 孙大勇
 pubDatetime: 2026-01-02T13:00:00Z
-title: RocketMQ问题排查指南
-postSlug: docker-proxy-guide
+title: RocketMQ 问题排查指南
+postSlug: rocketmq-troubleshooting-guide
 featured: false
 draft: false
 tags:
-- docker
-- proxy
-description: 这篇文章介绍了RocketMQ问题排查指南。
+  - rocketmq
+  - troubleshooting
+  - message-queue
+description: 全面的 RocketMQ 问题排查指南，包括网络配置、端口映射、日志分析等常见问题解决方案。
 --- 
 
 # RocketMQ 问题排查指南

@@ -1,14 +1,15 @@
 ---
 author: 孙大勇
 pubDatetime: 2026-01-02T13:00:00Z
-title: Docker 走代理配置指南
-postSlug: docker-proxy-guide
+title: VMware 中 CentOS Stream 扩容指南
+postSlug: expand-centos-stream-in-vmware
 featured: false
 draft: false
 tags:
-  - docker
-  - proxy
-description: 这篇文章介绍了如何为 Docker 配置代理服务器。
+  - vmware
+  - centos
+  - expansion
+description: 在 VMware 虚拟机中为 CentOS Stream 系统进行磁盘扩容的详细步骤和注意事项。
 ---
 ### 首先检查是否存在devices文件：
 

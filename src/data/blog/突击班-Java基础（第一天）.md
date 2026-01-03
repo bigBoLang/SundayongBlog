@@ -1,14 +1,15 @@
 ---
 author: 孙大勇
 pubDatetime: 2026-01-02T13:00:00Z
-title: 突击班-Java基础（第一天）
-postSlug: docker-proxy-guide
+title: 突击班 - Java 基础（第一天）
+postSlug: java-basics-crash-course-day1
 featured: false
 draft: false
 tags:
-  - docker
-  - proxy
-description: 这篇文章介绍了突击班-Java基础（第一天）。
+  - java
+  - basics
+  - crash-course
+description: Java 基础突击班第一天内容，涵盖 Object 对象方法等核心概念。
 ---
 
 ## 一、Object对象方法有哪些？（高御科技）
