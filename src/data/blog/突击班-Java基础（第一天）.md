@@ -1,6 +1,6 @@
 ---
 author: 孙大勇
-pubDatetime: 2026-01-02T13:00:00Z
+pubDatetime: 2026-01-02T19:00:00Z
 title: 突击班 - Java 基础（第一天）
 postSlug: java-basics-crash-course-day1
 featured: false
