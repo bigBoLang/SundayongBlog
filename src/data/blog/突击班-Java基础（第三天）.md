@@ -1,5 +1,5 @@
 ---
-author: 孙大勇
+author: 大波浪
 pubDatetime: 2026-01-02T20:00:00Z
 title: 突击班 - Java 基础（第三天）
 postSlug: java-basics-crash-course-day3

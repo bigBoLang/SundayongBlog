@@ -1,5 +1,5 @@
 ---
-author: 孙大勇
+author: 大波浪
 pubDatetime: 2026-01-02T14:00:00Z
 title: 在 Windows 11 上安装 Anaconda 教程
 postSlug: anaconda-installation-win11

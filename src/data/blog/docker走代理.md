@@ -1,5 +1,5 @@
 ---
-author: 孙大勇
+author: 大波浪
 pubDatetime: 2026-01-02T13:00:00Z
 title: Docker 走代理配置指南
 postSlug: docker-proxy-configuration

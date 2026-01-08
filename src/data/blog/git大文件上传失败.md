@@ -1,5 +1,5 @@
 ---
-author: 孙大勇
+author: 大波浪
 pubDatetime: 2026-01-02T15:00:00Z
 title: Git 大文件上传失败解决方案
 postSlug: git-large-file-upload-failure

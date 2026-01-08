@@ -1,5 +1,5 @@
 ---
-author: 孙大勇
+author: 大波浪
 pubDatetime: 2026-01-02T22:00:00Z
 title: VMware 中 CentOS Stream 扩容指南
 postSlug: expand-centos-stream-in-vmware
