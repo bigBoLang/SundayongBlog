@@ -1,5 +1,4 @@
 ---
-author: 大波浪
 pubDatetime: 2026-03-20T22:00:00Z
 title: Mac双开微信并运行小程序
 slug: Mac双开微信并运行小程序
