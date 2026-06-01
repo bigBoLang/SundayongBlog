@@ -1,9 +1,7 @@
 ---
-author: 大波浪
-pubDatetime: 2026-03-20T22:00:00Z
+pubDatetime: 2026-03-19T22:00:00Z
 title: Mac双开微信并运行小程序
-postSlug: mac-dual-wechat-mini-program
-featured: false
+slug: Mac双开微信并运行小程序
 draft: false
 tags:
   - Mac
