@@ -27,7 +27,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "test obsidan template 测试一下.md",
+                "file": "src/data/blog/test obsidan template 测试一下.md",
                 "mode": "source",
                 "source": false
               },
@@ -114,7 +114,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "test obsidan template 测试一下.md",
+                "file": "src/data/blog/test obsidan template 测试一下.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -133,7 +133,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "test obsidan template 测试一下.md",
+                "file": "src/data/blog/test obsidan template 测试一下.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -176,7 +176,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "test obsidan template 测试一下.md",
+                "file": "src/data/blog/test obsidan template 测试一下.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -215,10 +215,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "1168a76aa3b194fd",
+  "active": "d8449ad1c4e9efd1",
   "lastOpenFiles": [
     "src/data/blog/编程和英语.md",
-    "test obsidan template 测试一下.md",
+    "src/data/blog/test obsidan template 测试一下.md",
     "src/data/blog/墨迹大侠各种版本下载链接.md",
     "src/data/模板/Blog Template.md",
     "src/data/blog/胡思乱想20260604.md",
