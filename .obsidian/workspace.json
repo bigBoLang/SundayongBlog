@@ -161,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "src/data/blog/test obsidan template 测试一下.md",
+                "file": "src/data/blog/墨迹大侠各种版本下载链接.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -181,7 +181,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -199,7 +199,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "d23bc4287088a164",
+  "active": "181a0a074e3bb08e",
   "lastOpenFiles": [
     "src/data/blog/苗人凤为什么武功卓绝但是妻子却会出轨.md",
     "src/data/blog/历史教训.md",
