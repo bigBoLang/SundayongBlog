@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "cfb92191d9f8c878",
+        "id": "bd345c64a2a82e3f",
         "type": "tabs",
         "children": [
           {
-            "id": "57e96c0328dcb06f",
+            "id": "d23bc4287088a164",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "苗人凤为什么武功卓绝但是妻子却会出轨.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "苗人凤为什么武功卓绝但是妻子却会出轨"
+              "title": "新标签页"
             }
           }
         ]
@@ -55,7 +51,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "苗",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -79,8 +75,7 @@
               "title": "书签"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -200,7 +195,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "57e96c0328dcb06f",
+  "active": "d8449ad1c4e9efd1",
   "lastOpenFiles": [
     "未命名 2.base",
     "未命名 3.base",
