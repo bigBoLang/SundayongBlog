@@ -1,9 +1,7 @@
 ---
 import type { Page } from "astro";
 import type { CollectionEntry } from "astro:content";
-import IconArrowLeft from "@/assets/icons/IconArrowLeft.svg";
 import IconArrowRight from "@/assets/icons/IconArrowRight.svg";
-import LinkButton from "./LinkButton.astro";
 
 export interface Props {
   page: Page<CollectionEntry<"blog">>;
@@ -14,26 +12,42 @@ const { page } = Astro.props;
 
 {
   page.lastPage > 1 && (
-    <nav class="mt-auto mb-8 flex justify-center" aria-label="Pagination">
-      <LinkButton
-        disabled={!page.url.prev}
-        href={page.url.prev as string}
-        class:list={["me-4 select-none", { "opacity-50": !page.url.prev }]}
-        ariaLabel="Previous"
+    <nav
+      class="mt-8 mb-8 flex items-center justify-center gap-4"
+      aria-label="Pagination"
+    >
+      <a
+        href={page.url.prev ? (page.url.prev as string) : undefined}
+        class:list={[
+          "group inline-flex items-center gap-1.5 border border-border px-4 py-2 text-sm transition-all duration-300",
+          "hover:border-accent hover:text-accent hover:shadow-[0_0_16px_-4px_var(--color-accent)]",
+          { "pointer-events-none opacity-40": !page.url.prev },
+        ]}
+        aria-label="Previous page"
       >
-        <IconArrowLeft class="inline-block rtl:rotate-180" />
-        Prev
-      </LinkButton>
-      {page.currentPage} / {page.lastPage}
-      <LinkButton
-        disabled={!page.url.next}
-        href={page.url.next as string}
-        class:list={["ms-4 select-none", { "opacity-50": !page.url.next }]}
-        ariaLabel="Next"
+        <IconArrowRight class="size-4 rotate-180 transition-transform group-hover:-translate-x-0.5 rtl:rotate-0 rtl:group-hover:translate-x-0.5" />
+        上一页
+      </a>
+
+      {/* Page indicator */}
+      <span class="font-mono text-sm text-foreground/60 tabular-nums">
+        <span class="font-bold text-accent">{page.currentPage}</span>
+        <span class="mx-1 text-foreground/30">/</span>
+        <span>{page.lastPage}</span>
+      </span>
+
+      <a
+        href={page.url.next ? (page.url.next as string) : undefined}
+        class:list={[
+          "group inline-flex items-center gap-1.5 border border-border px-4 py-2 text-sm transition-all duration-300",
+          "hover:border-accent hover:text-accent hover:shadow-[0_0_16px_-4px_var(--color-accent)]",
+          { "pointer-events-none opacity-40": !page.url.next },
+        ]}
+        aria-label="Next page"
       >
-        Next
-        <IconArrowRight class="inline-block rtl:rotate-180" />
-      </LinkButton>
+        下一页
+        <IconArrowRight class="size-4 transition-transform group-hover:translate-x-0.5 rtl:-rotate-180 rtl:group-hover:-translate-x-0.5" />
+      </a>
     </nav>
   )
 }
