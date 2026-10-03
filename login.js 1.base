@@ -1,0 +1,191 @@
+var g_org_damage = 0
+var g_uin = {{UIN}}
+var g_authtime = {{AUTHTIME}}
+var g_loginkey = "{{LOGINKEY}}"
+
+// authtime=1757085460
+// loginkey=622de1e8d6fcdf527a20a4c842ae9cf6
+// uin=21353204
+function read_string(ptrvar) {
+    var loginkey = ptrvar.add(0x14).readUtf16String()
+    return loginkey 
+} 
+
+function write_string(ptrvar, str) {
+    ptrvar.add(0x14).writeUtf16String(str)
+}
+
+function hook_native() {
+    var module = Process.findModuleByName("libil2cpp.so");
+    console.log(module.base);
+    var addr = get_recv_addr()
+    //var addr = module.base.add(0xFB0300);
+    Interceptor.attach(addr, {
+        onEnter: function (args) {
+
+        }, onLeave: function (retval) {
+            var cspkgptr = Memory.readPointer(ptr(retval).add(0x18));
+            var cspkgheadptr = Memory.readPointer(ptr(retval).add(0x10));
+            var heardbeat = Memory.readPointer(cspkgptr.add(0x18));
+            // if(!heardbeat.isNull()){
+            //     return
+            // }
+
+
+
+        }
+    })
+}
+
+function hook_native_send() {
+    var module = Process.findModuleByName("libil2cpp.so");
+    if (!module) return
+    //var addr = module.base.add(0xc764e0);//小程序
+    var addr = get_send_addr()
+    console.log(addr);
+    Interceptor.attach(addr, {
+        onEnter: function (args) {
+            //console.log("args 1 ", args[0]);
+
+            var cspkgptr = Memory.readPointer(ptr(args[1]).add(0x18));
+            var heardbeat = Memory.readPointer(cspkgptr.add(0x10));
+            if (!heardbeat.isNull()) {
+                return
+            }
+            var cspkgheadptr = Memory.readPointer(ptr(args[1]).add(0x10));
+
+            var cmd = Memory.readUShort(cspkgheadptr.add(0x12));
+
+            if (cmd == 7009) {
+                Memory.writeUShort(cspkgheadptr.add(0x12), 0);
+            }
+
+            for (var i = 0x30; i <= 0x30; i += 8) {
+                var ptrvar = Memory.readPointer(cspkgptr.add(i));
+                if (!ptrvar.isNull()) {
+                    //劫持登录
+                    if (i == 0x30) {
+                        var loginkey_ptr = ptrvar.add(0x28).readPointer()
+                        //uin
+                        ptrvar.add(0x10).writeInt(g_uin)
+                        ptrvar.add(0x18).writeInt(g_authtime)
+                        write_string(loginkey_ptr, g_loginkey)
+
+                        var Uin = ptrvar.add(0x10).readInt()
+
+                        var AuthTime = ptrvar.add(0x18).readInt()
+                        var loginkey = read_string(loginkey_ptr)
+                        var accountname_ptr = ptrvar.add(0x48).readPointer()
+                        if (!accountname_ptr.isNull()) {
+                            console.log(accountname_ptr)
+                            var accountname = read_string(accountname_ptr)
+                            console.log("accountname", accountname)
+                        }
+
+
+                        console.log("uin kv", Uin, loginkey)
+                        console.log("AuthTime", AuthTime)
+
+
+                    }
+
+                }
+            }
+        }, onLeave: function (retval) {
+
+        }
+    })
+}
+
+function get_function_base(address) {
+    var search_list = Memory.scanSync(address.sub(0x200), 0x200, "FF 03 01 D1")
+    console.log(JSON.stringify(search_list))
+    if (search_list.length > 0) {
+        return search_list[0]['address']
+    }
+    return ptr(0)
+}
+
+function get_send_addr() {
+    var module = Process.findModuleByName("libil2cpp.so");
+    var search_list = []
+    console.log(module.base, module.size)
+    search_list = Memory.scanSync(module.base, 0x2500000, "60 12 40 F9 20 14 00 B4 E1 03 1F AA")
+    console.log(JSON.stringify(search_list))
+    for (var index in search_list) {
+        var address = search_list[index]['address']
+        var funcbase = get_function_base(address)
+        console.log("send offset=", (funcbase - module.base).toString(16))
+
+    }
+    return funcbase
+}
+
+function get_recv_addr() {
+    var module = Process.findModuleByName("libil2cpp.so");
+    var search_list = []
+    console.log(module.base, module.size)
+    search_list = Memory.scanSync(module.base, 0x2500000, "FF 07 00 F9 BF C3 1E 78 D3 10 00 B4 68 1A 40 B9")
+    console.log(JSON.stringify(search_list))
+    for (var index in search_list) {
+        var address = search_list[index]['address']
+        var funcbase = get_function_base(address)
+        console.log("recv offset=", (funcbase - module.base).toString(16))
+
+    }
+}
+
+function get_list_entry(list_ptr, size, index) {
+    if (size == 4) {
+        return list_ptr.add(0x20 + index * size).readInt()
+    }
+    return list_ptr.add(0x20 + index * size).readPointer()
+}
+
+function main_entry() {
+    hook_native_send()
+}
+
+function main() {
+    //get_send_addr()
+    //get_recv_addr()
+    //hook_native()
+    //hook_native_send()
+    setImmediate(function () {
+        function waitForModule(name, callback) {
+            var module = Process.findModuleByName(name);
+            if (module) {
+                callback();
+            } else {
+                setTimeout(function () {
+                    waitForModule(name, callback);
+                }, 100);
+            }
+        }
+
+        waitForModule('libil2cpp.so', main_entry);
+    });
+}
+
+// 定义一个死循环函数
+function hangApp() {
+    while (true) {
+        // 打印一条日志，确认脚本已经生效（注意：打印频率不要太高，否则 logcat 输出可能会爆满）
+        setTimeout(function () {
+        }, 1000);
+
+    }
+}
+
+main()
+//setImmediate(hangApp)
+
+
+rpc.exports = {
+    init(stage, parameters) {
+        console.log('[init]', stage, JSON.stringify(parameters));
+    },
+    dispose() {
+        console.log('[dispose]');
+    }
+};
