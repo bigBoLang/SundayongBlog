@@ -1,0 +1,41 @@
+---
+const { slug } = Astro.props;
+---
+
+<div class="giscus-container mt-10" data-slot="giscus"></div>
+
+<script>
+  document.addEventListener("astro:page-load", () => {
+    const container = document.querySelector(".giscus-container");
+    if (!container) return;
+
+    // Skip if already loaded
+    if (container.querySelector("iframe")) return;
+
+    const isDark = document.documentElement.dataset.theme === "dark";
+
+    const script = document.createElement("script");
+    script.src = "https://giscus.app/client.js";
+    script.setAttribute("data-repo", "bigBoLang/SundayongBlog");
+    script.setAttribute("data-repo-id", "R_kgDxxx");
+    script.setAttribute("data-category", "Announcements");
+    script.setAttribute("data-category-id", "DIC_kwDxxx");
+    script.setAttribute("data-mapping", "pathname");
+    script.setAttribute("data-strict", "0");
+    script.setAttribute("data-reactions-enabled", "1");
+    script.setAttribute("data-emit-metadata", "0");
+    script.setAttribute("data-input-position", "bottom");
+    script.setAttribute("data-theme", isDark ? "dark_dimmed" : "light");
+    script.setAttribute("data-lang", "zh-CN");
+    script.setAttribute("crossorigin", "anonymous");
+    script.async = true;
+
+    container.appendChild(script);
+  });
+</script>
+
+<style>
+  .giscus-container {
+    @apply mt-8 rounded-lg border border-border bg-muted/20 p-4;
+  }
+</style>
