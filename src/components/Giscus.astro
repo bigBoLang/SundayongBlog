@@ -1,41 +1,29 @@
 ---
-const { slug } = Astro.props;
+const isDark = Astro.props.isDark ?? false;
 ---
 
-<div class="giscus-container mt-10" data-slot="giscus"></div>
-
-<script>
-  document.addEventListener("astro:page-load", () => {
-    const container = document.querySelector(".giscus-container");
-    if (!container) return;
-
-    // Skip if already loaded
-    if (container.querySelector("iframe")) return;
-
-    const isDark = document.documentElement.dataset.theme === "dark";
-
-    const script = document.createElement("script");
-    script.src = "https://giscus.app/client.js";
-    script.setAttribute("data-repo", "bigBoLang/SundayongBlog");
-    script.setAttribute("data-repo-id", "R_kgDOQygc5w");
-    script.setAttribute("data-category", "Announcements");
-    script.setAttribute("data-category-id", "DIC_kwDOQygc584DKOGe");
-    script.setAttribute("data-mapping", "pathname");
-    script.setAttribute("data-strict", "0");
-    script.setAttribute("data-reactions-enabled", "1");
-    script.setAttribute("data-emit-metadata", "0");
-    script.setAttribute("data-input-position", "bottom");
-    script.setAttribute("data-theme", isDark ? "dark_dimmed" : "light");
-    script.setAttribute("data-lang", "zh-CN");
-    script.setAttribute("crossorigin", "anonymous");
-    script.async = true;
-
-    container.appendChild(script);
-  });
-</script>
+<div class="giscus-wrapper mt-8">
+  <script
+    is:inline
+    src="https://giscus.app/client.js"
+    data-repo="bigBoLang/SundayongBlog"
+    data-repo-id="R_kgDOQygc5w"
+    data-category="Announcements"
+    data-category-id="DIC_kwDOQygc584DKOGe"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme={isDark ? "dark_dimmed" : "light"}
+    data-lang="zh-CN"
+    crossorigin="anonymous"
+    async
+  ></script>
+</div>
 
 <style>
-  .giscus-container {
+  .giscus-wrapper {
     @apply mt-8 rounded-lg border border-border bg-muted/20 p-4;
   }
 </style>
