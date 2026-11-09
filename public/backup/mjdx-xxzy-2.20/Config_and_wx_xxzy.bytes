@@ -1,0 +1,14 @@
+{
+"channel":"and_wx_xxzy",
+"verurl":"http://web-a5h5.hncqkj.cn/ver/check_ver.php",
+"version":"2.1",
+"hide_fps":1,
+"bugly_appid":"89692a19c0",
+"bugly_debug":0,
+"disable_bugly":0,
+"enable_guide":1,
+"stage":1,
+"useForVideo":0,
+"shushu_appid":"64a723da68d848b987c3ebf294016762",
+"isH5":1
+}

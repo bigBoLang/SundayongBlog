@@ -1,0 +1,62 @@
+AndroidManifest.xml 关键字符串（行侠仗义五千年 小程序转App 投放版 2.20）
+================================================================
+
+[包信息]
+package            com.xxzywqnxcx.tt
+versionName        2.20
+versionCode        20
+compileSdkVersion  23
+platformBuild      28
+
+[Application]
+name               com.dodjoy.thirdPlatform.GDTApplication
+allowBackup        false
+usesCleartextTraffic true
+
+[SDK / 游戏 Activity]
+com.dodjoy.unityplayer.DodUnityPlayerActivity
+com.dodjoy.unitywebview.DodWebView
+com.dodjoy.dodsdk.view.activity.DodLoginActivity
+com.dodjoy.dodsdk.view.activity.DodAccountActivity
+com.dodjoy.dodsdk.view.activity.DodPayActivity
+com.dodjoy.dodsdk.view.activity.DodBindMobActivity
+com.dodjoy.dodsdk.view.activity.DodRealNameActivity
+com.dodjoy.dodsdk.view.activity.DodCustomerActivity
+com.dodjoy.dodsdk.view.activity.DodFcmActivity
+
+[微信支付]
+com.dmlt.kldlz.guanwang.wxapi.WXPayEntryActivity
+WxAppID
+wx20b7a9739064d80f
+wxf248ddd78b346a78
+
+[渠道]
+and_wx_xxzy
+wx_android
+
+[广告 / 归因 SDK]
+com.xxzywqnxcx.tt.pangle.provider.proxy.main
+com.xxzywqnxcx.tt.pangle.servermanager.main
+com.xxzywqnxcx.tt.openadsdk.permission.TT_PANGOLIN
+com.bytedance.sdk.openadsdk.multipro.TTMultiProvider
+com.bytedance.sdk.openadsdk.stub.activity.Stub_Activity
+com.bytedance.pangle.FileProvider
+com.bytedance.applog.collector.Collector
+com.bytedance.applog.migrate.MigrateDetectorActivity
+com.bytedance.applog.onekit.DeviceComponentRegistrar
+com.bytedance.android.openliveplugin.process.server.LiveServerManager
+ZEUS_PLUGIN_com.byted.csj.ext
+packageName:com.byted.csj.ext
+packageName:com.byted.pangle
+packageName:com.byted.live.lite
+
+[其它 provider]
+com.xxzywqnxcx.tt.TTFileProvider
+com.xxzywqnxcx.tt.TTMultiProvider
+com.xxzywqnxcx.tt.adFileProvider
+com.xxzywqnxcx.tt.bd.provider
+com.xxzywqnxcx.tt.gdt.fileprovider
+com.xxzywqnxcx.tt.pangle.fileprovider
+com.xxzywqnxcx.tt.sigprovider
+com.xxzywqnxcx.tt.unicorn.fileprovider
+com.xxzywqnxcx.tt.qiyukf.ipc.provider.preference

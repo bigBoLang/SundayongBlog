@@ -1,0 +1,40 @@
+{
+  "name": "行侠仗义五千年 微信小程序转App（投放版）",
+  "package": "com.xxzywqnxcx.tt",
+  "versionName": "2.20",
+  "versionCode": 20,
+  "size_bytes": 1200348709,
+  "size_human": "1.12 GiB",
+  "md5": "3307a7468ce1d05cac1128cd4eedc4ef",
+  "sha256": "9f6fbf8f900569a28bec2038218dca7aed269b2d6d953a00c3a8f5d403f65b5c",
+  "build_time": "2025-11-26T02:03:43Z",
+  "sdk": {
+    "DodStaticsName": "A5_xxzy_tfb_and",
+    "PkgName": "A5_xxzy_wxxcxand_tfb",
+    "AnnotationTextID": "20080086",
+    "AdParamId": "5",
+    "adAppId": "46235"
+  },
+  "channel": "and_wx_xxzy",
+  "release_host": "http://apiv2.hncqkj.cn/",
+  "verurl": "http://web-a5h5.hncqkj.cn/ver/check_ver.php",
+  "config_version": "2.1",
+  "isH5": 1,
+  "server_prefix": "行侠",
+  "signature": {
+    "subject": "L=cn, O=shenzhen",
+    "issuer": "L=cn, O=shenzhen",
+    "not_before": "2022-10-24T08:19:33Z",
+    "not_after": "2047-10-18T08:19:33Z",
+    "serial": "56FCDE56",
+    "sha256": "63:D6:FD:7A:82:BC:BB:E4:6E:9F:27:A5:AE:31:13:E9:7E:02:F9:61:01:C4:CE:4B:41:AD:96:93:89:44:16:A3"
+  },
+  "origin": {
+    "short": "https://sdk-server.xhgamesdk.com/u/3zcbpb?a=market",
+    "apk": "https://cdn.xhgamesdk.com/pack-ad/files/1020/9625/9625-20251126-1999.apk"
+  },
+  "mirror": {
+    "blog": "https://blog.dabolang.dpdns.org/dl/mjdx-xxzy-2.20.apk",
+    "direct": "http://49.235.159.190:18080/dl/mjdx-xxzy-2.20.apk"
+  }
+}

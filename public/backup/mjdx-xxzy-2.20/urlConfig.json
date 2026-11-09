@@ -1,0 +1,8 @@
+{
+  "DebugHostUrl":"http://test.apiv2.dodjoy.com/",
+  "DebugYinSiUrl":"http://test.apiv2.dodjoy.com/help/notice/privacy.html",
+  "DebugXieyiUrl":"http://test.apiv2.dodjoy.com/help/notice/service.html",
+  "ReleaseHostUrl":"http://apiv2.hncqkj.cn/",
+  "ReleaseYinSiUrl":"https://sdk-server.xhgamesdk.com/article/41.html",
+  "ReleaseXieyiUrl":"https://sdk-server.xhgamesdk.com/article/43.html"
+}
